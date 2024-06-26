@@ -9,15 +9,19 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v4
-      name: Check out the code
+    - name: Check out the code
+      uses: actions/checkout@v4
 
-    - name: Install dependencies
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Create and activate virtual environment
       run: |
-        cd ~/actions-runner/_work/Flask-app-with-github-action/Flask-app-with-github-action
+        python3.12 -m venv venv
         source venv/bin/activate
         pip install flask gunicorn
-        deactivate
 
     - name: Restart Flask App
       run: sudo systemctl restart flask-app
