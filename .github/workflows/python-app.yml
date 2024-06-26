@@ -10,6 +10,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Deploy Flask App
-      run: sudo systemctl restart flask-app
+      name: Check out the code
 
+    - name: Install dependencies
+      run: |
+        cd ~/actions-runner/_work/Flask-app-with-github-action/Flask-app-with-github-action
+        source venv/bin/activate
+        pip install flask gunicorn
+        deactivate
+
+    - name: Restart Flask App
+      run: sudo systemctl restart flask-app
