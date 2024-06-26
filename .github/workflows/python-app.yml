@@ -22,3 +22,5 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         pip install flask gunicorn
+    - name: Restart Flask app
+      run: sudo systemctl restart flask-app
