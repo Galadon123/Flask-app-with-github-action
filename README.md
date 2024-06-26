@@ -4,7 +4,7 @@
 ### Project Introduction
 This guide walks through the process of setting up a Continuous Integration/Continuous Deployment (CI/CD) pipeline for a Flask application on an AWS EC2 instance using GitHub Actions. The CI/CD pipeline ensures that every change pushed to the GitHub repository is automatically deployed to the EC2 instance, making the deployment process efficient and reliable.
 
-![alt text](./images/image-17.png)
+![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-17.png)
 
 ### Prerequisites
 - **AWS Account**: Ensure you have an AWS account with permissions to create and manage EC2 instances.
@@ -77,18 +77,18 @@ This guide walks through the process of setting up a Continuous Integration/Cont
     - Choose "Ubuntu" as the operating system.
     - Ensure it's a free-tier eligible instance type.
     
-    ![alt text](./images/image.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image.png)
 
 3. **Create a new key pair or use an existing one**.
    
-    ![alt text](./images/image-1.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-1.png)
 
 4. **Configure Security Group**:
     - Go to security group > select the one for your instance > Edit inbound rules.
     - Allow SSH (port 22) from your IP.
     - Allow HTTP (port 80) from anywhere.
    
-    ![alt text](./images/image-2.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-2.png)
 
 ### Connect to EC2 Instance
 1. **SSH into EC2 Instance**:
@@ -100,7 +100,7 @@ This guide walks through the process of setting up a Continuous Integration/Cont
     ssh -i "your-key-pair.pem" ubuntu@your-ec2-public-ip
     ```
 
-     ![alt text](./images/image-3.png)
+     ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-3.png)
 
 ### Setup GitHub Actions Runner on EC2
 1. **Go to your repository’s settings on GitHub**.
