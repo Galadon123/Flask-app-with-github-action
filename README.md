@@ -107,11 +107,11 @@ This guide walks through the process of setting up a Continuous Integration/Cont
    
 2. **Under “Actions”, click “Runners” and add a new self-hosted runner for Linux**.
    
-     ![alt text](./images/image-4.png)
+     ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-4.png)
 
 3. **Follow the commands provided to set up the runner on your EC2 instance**:
 
-    ![alt text](./images/image-5.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-5.png)
 
     ```bash
     mkdir actions-runner && cd actions-runner
@@ -121,14 +121,11 @@ This guide walks through the process of setting up a Continuous Integration/Cont
     ```
     You will get something like this 
 
-    ![alt text](./images/image-6.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-6.png)
 
     After that, keep hitting Enter to continue with the default settings. Now if you go to the github repository > settings > runners, you will get something like this:
 
-     ![alt text](./images/image-7.png)
-
-
-
+     ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-7.png)
 
 4. **Install and start the runner service**:
     ```bash
@@ -136,7 +133,7 @@ This guide walks through the process of setting up a Continuous Integration/Cont
     sudo ./svc.sh start
     ```
 
-    ![alt text](./images/image-8.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-8.png)
 
 ### Setup CI/CD Pipeline with GitHub Actions
 
@@ -196,7 +193,7 @@ If you go to the SSH terminal, you can see _work directory. Now go to _work fold
     ```
     If you visit http://<ec2-instance-public-ip> you will see:
 
-    ![alt text](./images/image-11.png)
+    ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-11.png)
 
 
 2. **Configure Nginx to proxy requests to the Flask application**:
@@ -274,7 +271,7 @@ If you go to the SSH terminal, you can see _work directory. Now go to _work fold
 1. **Verify the current app**:
     - Visit `http://<ec2-instance-public-ip>` to see output the output
 
-    ![](./images/out-1.png)
+    ![](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/out-1.png)
 
 2. **Update `app.py` to add a new route**:
     ```python
@@ -306,6 +303,6 @@ If you go to the SSH terminal, you can see _work directory. Now go to _work fold
     - Visit `http://<ec2-instance-public-ip>` to see "Hello, from Flask App updated!".
     - Visit `http://<ec2-instance-public-ip>/new` to see "This is a new route!".
 
-    ![](./images/out-2.png)
+    ![](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/out-2.png)
 
 By following these steps, you will set up a CI/CD pipeline for a Flask application using GitHub Actions and deploy it to an AWS EC2 instance with Nginx as a reverse proxy. This ensures that every change pushed to the GitHub repository is automatically deployed to the EC2 instance.
