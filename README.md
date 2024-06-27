@@ -191,7 +191,7 @@ If you go to the SSH terminal, you can see _work directory. Now go to _work fold
     sudo apt-get update
     sudo apt-get install -y nginx
     ```
-    If you visit http://<ec2-instance-public-ip> you will see:
+    If you visit `http://<ec2-instance-public-ip>` you will see:
 
     ![alt text](https://github.com/Galadon123/Flask-app-with-github-action/blob/main/images/image-11.png)
 
